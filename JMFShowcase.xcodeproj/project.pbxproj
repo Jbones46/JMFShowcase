@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB2CFFE96253344BD4D0511C /* Pods_JMFShowcase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7414D1B7C129FACE5ED0AB /* Pods_JMFShowcase.framework */; };
 		D049680B1BD12E69006E11CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D049680A1BD12E69006E11CB /* AppDelegate.swift */; };
 		D049680D1BD12E69006E11CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D049680C1BD12E69006E11CB /* ViewController.swift */; };
 		D04968101BD12E69006E11CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D049680E1BD12E69006E11CB /* Main.storyboard */; };
@@ -21,9 +22,14 @@
 		D04968301BD13C68006E11CB /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D049682F1BD13C68006E11CB /* RoundedImage.swift */; settings = {ASSET_TAGS = (); }; };
 		D04968321BD13F13006E11CB /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04968311BD13F13006E11CB /* MaterialButton.swift */; settings = {ASSET_TAGS = (); }; };
 		D04968341BD14205006E11CB /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04968331BD14205006E11CB /* MaterialTextField.swift */; settings = {ASSET_TAGS = (); }; };
+		D04968391BD15648006E11CB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04968361BD15648006E11CB /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
+		D049683A1BD15648006E11CB /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04968371BD15648006E11CB /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
+		D049683B1BD15648006E11CB /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04968381BD15648006E11CB /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		837AEF1AE48E5360366E7EB6 /* Pods-JMFShowcase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMFShowcase.release.xcconfig"; path = "Pods/Target Support Files/Pods-JMFShowcase/Pods-JMFShowcase.release.xcconfig"; sourceTree = "<group>"; };
+		8B7414D1B7C129FACE5ED0AB /* Pods_JMFShowcase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JMFShowcase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D04968071BD12E69006E11CB /* JMFShowcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMFShowcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D049680A1BD12E69006E11CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D049680C1BD12E69006E11CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +46,10 @@
 		D049682F1BD13C68006E11CB /* RoundedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 		D04968311BD13F13006E11CB /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
 		D04968331BD14205006E11CB /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
+		D04968361BD15648006E11CB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		D04968371BD15648006E11CB /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		D04968381BD15648006E11CB /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		FD4015BEAD81CC1BD1C6478C /* Pods-JMFShowcase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMFShowcase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JMFShowcase/Pods-JMFShowcase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +57,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04968391BD15648006E11CB /* Bolts.framework in Frameworks */,
+				D049683A1BD15648006E11CB /* FBSDKCoreKit.framework in Frameworks */,
+				D049683B1BD15648006E11CB /* FBSDKLoginKit.framework in Frameworks */,
+				BB2CFFE96253344BD4D0511C /* Pods_JMFShowcase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		463DF307C7519D9774040585 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD4015BEAD81CC1BD1C6478C /* Pods-JMFShowcase.debug.xcconfig */,
+				837AEF1AE48E5360366E7EB6 /* Pods-JMFShowcase.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CDAFDA7BBC159D84AF4F5A1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B7414D1B7C129FACE5ED0AB /* Pods_JMFShowcase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D04967FE1BD12E69006E11CB = {
 			isa = PBXGroup;
 			children = (
 				D04968091BD12E69006E11CB /* JMFShowcase */,
 				D04968081BD12E69006E11CB /* Products */,
+				463DF307C7519D9774040585 /* Pods */,
+				CDAFDA7BBC159D84AF4F5A1C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +105,7 @@
 		D04968091BD12E69006E11CB /* JMFShowcase */ = {
 			isa = PBXGroup;
 			children = (
+				D04968351BD14C90006E11CB /* Frameworks */,
 				D049682A1BD134D4006E11CB /* Utilities */,
 				D049681F1BD12EA1006E11CB /* Resources */,
 				D049681E1BD12E9B006E11CB /* Model */,
@@ -131,6 +165,16 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
+		D04968351BD14C90006E11CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D04968361BD15648006E11CB /* Bolts.framework */,
+				D04968371BD15648006E11CB /* FBSDKCoreKit.framework */,
+				D04968381BD15648006E11CB /* FBSDKLoginKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D04968191BD12E69006E11CB /* Build configuration list for PBXNativeTarget "JMFShowcase" */;
 			buildPhases = (
+				FC5FBA398FE5D711D4F9C101 /* Check Pods Manifest.lock */,
 				D04968031BD12E69006E11CB /* Sources */,
 				D04968041BD12E69006E11CB /* Frameworks */,
 				D04968051BD12E69006E11CB /* Resources */,
+				C622091517683361B39461F2 /* Embed Pods Frameworks */,
+				EA423D98B9BB114B382280EE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,6 +247,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C622091517683361B39461F2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JMFShowcase/Pods-JMFShowcase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA423D98B9BB114B382280EE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JMFShowcase/Pods-JMFShowcase-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC5FBA398FE5D711D4F9C101 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D04968031BD12E69006E11CB /* Sources */ = {
@@ -323,8 +418,13 @@
 		};
 		D049681A1BD12E69006E11CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD4015BEAD81CC1BD1C6478C /* Pods-JMFShowcase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JMFShowcase",
+				);
 				INFOPLIST_FILE = JMFShowcase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = justinferre.JMFShowcase;
@@ -334,8 +434,13 @@
 		};
 		D049681B1BD12E69006E11CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 837AEF1AE48E5360366E7EB6 /* Pods-JMFShowcase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JMFShowcase",
+				);
 				INFOPLIST_FILE = JMFShowcase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = justinferre.JMFShowcase;
@@ -362,6 +467,7 @@
 				D049681B1BD12E69006E11CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
