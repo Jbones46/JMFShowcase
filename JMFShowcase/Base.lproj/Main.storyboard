@@ -72,7 +72,7 @@
                                                 <rect key="frame" x="0.0" y="22" width="65" height="65"/>
                                                 <animations/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7C-an-meA" customClass="MaterialButton" customModule="JMFShowcase" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7C-an-meA" customClass="MaterialButton" customModule="JMFShowcase" customModuleProvider="target">
                                                 <rect key="frame" x="105" y="38" width="415" height="33"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.11764705882352941" green="0.53333333333333333" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
@@ -140,7 +140,7 @@
                                         </constraints>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEc-RR-q8W" customClass="MaterialButton" customModule="JMFShowcase" customModuleProvider="target">
                                         <rect key="frame" x="182" y="204" width="196" height="33"/>
@@ -154,6 +154,9 @@
                                         <state key="normal" title="Login/Sign Up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="attemptLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jqY-Rm-5Uw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
@@ -193,10 +196,34 @@
                             <constraint firstItem="2CN-6n-QV7" firstAttribute="top" secondItem="1nS-ac-Ca8" secondAttribute="bottom" constant="20" id="zCj-g2-K6h"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="VIi-ge-ySi" id="MhB-1h-NJE"/>
+                        <outlet property="passwordField" destination="U17-BW-0xv" id="Arz-Qk-aps"/>
+                        <segue destination="ndW-bU-xjd" kind="show" identifier="loggedIn" id="Wz4-Bc-6fQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="360" y="366"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dvz-LS-LUv">
+            <objects>
+                <viewController id="ndW-bU-xjd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MVA-HH-p2P"/>
+                        <viewControllerLayoutGuide type="bottom" id="a4o-tC-MJV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hby-E2-tZw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nUm-V5-tA3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042" y="366"/>
         </scene>
     </scenes>
     <resources>

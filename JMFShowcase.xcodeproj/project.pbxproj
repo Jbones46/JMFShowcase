@@ -25,6 +25,7 @@
 		D04968391BD15648006E11CB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04968361BD15648006E11CB /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
 		D049683A1BD15648006E11CB /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04968371BD15648006E11CB /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
 		D049683B1BD15648006E11CB /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04968381BD15648006E11CB /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
+		D0FE7C0C1BD187B400F6DF5A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE7C0B1BD187B400F6DF5A /* DataService.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		D04968361BD15648006E11CB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		D04968371BD15648006E11CB /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		D04968381BD15648006E11CB /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		D0FE7C0B1BD187B400F6DF5A /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		FD4015BEAD81CC1BD1C6478C /* Pods-JMFShowcase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMFShowcase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JMFShowcase/Pods-JMFShowcase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 		D04968091BD12E69006E11CB /* JMFShowcase */ = {
 			isa = PBXGroup;
 			children = (
+				D0FE7C0A1BD187A000F6DF5A /* Services */,
 				D04968351BD14C90006E11CB /* Frameworks */,
 				D049682A1BD134D4006E11CB /* Utilities */,
 				D049681F1BD12EA1006E11CB /* Resources */,
@@ -173,6 +176,14 @@
 				D04968381BD15648006E11CB /* FBSDKLoginKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0FE7C0A1BD187A000F6DF5A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D0FE7C0B1BD187B400F6DF5A /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +319,7 @@
 				D049680B1BD12E69006E11CB /* AppDelegate.swift in Sources */,
 				D049682E1BD13508006E11CB /* Constants.swift in Sources */,
 				D04968341BD14205006E11CB /* MaterialTextField.swift in Sources */,
+				D0FE7C0C1BD187B400F6DF5A /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +365,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -398,6 +411,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
