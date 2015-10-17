@@ -26,6 +26,8 @@
 		D049683A1BD15648006E11CB /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04968371BD15648006E11CB /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
 		D049683B1BD15648006E11CB /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04968381BD15648006E11CB /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
 		D0FE7C0C1BD187B400F6DF5A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE7C0B1BD187B400F6DF5A /* DataService.swift */; settings = {ASSET_TAGS = (); }; };
+		D0FE7C0E1BD26CF700F6DF5A /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE7C0D1BD26CF700F6DF5A /* FeedVC.swift */; settings = {ASSET_TAGS = (); }; };
+		D0FE7C101BD26DC600F6DF5A /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE7C0F1BD26DC600F6DF5A /* PostCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		D04968371BD15648006E11CB /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		D04968381BD15648006E11CB /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		D0FE7C0B1BD187B400F6DF5A /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		D0FE7C0D1BD26CF700F6DF5A /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		D0FE7C0F1BD26DC600F6DF5A /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		FD4015BEAD81CC1BD1C6478C /* Pods-JMFShowcase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMFShowcase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JMFShowcase/Pods-JMFShowcase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,7 +119,6 @@
 				D049681D1BD12E94006E11CB /* View */,
 				D049681C1BD12E8C006E11CB /* Controller */,
 				D049680A1BD12E69006E11CB /* AppDelegate.swift */,
-				D049680C1BD12E69006E11CB /* ViewController.swift */,
 				D049680E1BD12E69006E11CB /* Main.storyboard */,
 				D04968111BD12E69006E11CB /* Assets.xcassets */,
 				D04968131BD12E69006E11CB /* LaunchScreen.storyboard */,
@@ -127,6 +130,8 @@
 		D049681C1BD12E8C006E11CB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D049680C1BD12E69006E11CB /* ViewController.swift */,
+				D0FE7C0D1BD26CF700F6DF5A /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 				D049682F1BD13C68006E11CB /* RoundedImage.swift */,
 				D04968311BD13F13006E11CB /* MaterialButton.swift */,
 				D04968331BD14205006E11CB /* MaterialTextField.swift */,
+				D0FE7C0F1BD26DC600F6DF5A /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -312,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0FE7C0E1BD26CF700F6DF5A /* FeedVC.swift in Sources */,
 				D04968291BD1347C006E11CB /* MaterialView.swift in Sources */,
 				D049680D1BD12E69006E11CB /* ViewController.swift in Sources */,
 				D04968321BD13F13006E11CB /* MaterialButton.swift in Sources */,
@@ -320,6 +327,7 @@
 				D049682E1BD13508006E11CB /* Constants.swift in Sources */,
 				D04968341BD14205006E11CB /* MaterialTextField.swift in Sources */,
 				D0FE7C0C1BD187B400F6DF5A /* DataService.swift in Sources */,
+				D0FE7C101BD26DC600F6DF5A /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
