@@ -5,5 +5,6 @@ use_frameworks!
 
 target 'JMFShowcase' do
 pod 'Firebase', '>= 2.4.2'
+pod 'Alamofire', '~> 3.0'
 end
 
