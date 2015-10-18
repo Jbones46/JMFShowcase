@@ -28,6 +28,7 @@
 		D0FE7C0C1BD187B400F6DF5A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE7C0B1BD187B400F6DF5A /* DataService.swift */; settings = {ASSET_TAGS = (); }; };
 		D0FE7C0E1BD26CF700F6DF5A /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE7C0D1BD26CF700F6DF5A /* FeedVC.swift */; settings = {ASSET_TAGS = (); }; };
 		D0FE7C101BD26DC600F6DF5A /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE7C0F1BD26DC600F6DF5A /* PostCell.swift */; settings = {ASSET_TAGS = (); }; };
+		D0FE7C121BD3EA3B00F6DF5A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE7C111BD3EA3B00F6DF5A /* Post.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		D0FE7C0B1BD187B400F6DF5A /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		D0FE7C0D1BD26CF700F6DF5A /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		D0FE7C0F1BD26DC600F6DF5A /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		D0FE7C111BD3EA3B00F6DF5A /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		FD4015BEAD81CC1BD1C6478C /* Pods-JMFShowcase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JMFShowcase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JMFShowcase/Pods-JMFShowcase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +153,7 @@
 		D049681E1BD12E9B006E11CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D0FE7C111BD3EA3B00F6DF5A /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0FE7C0E1BD26CF700F6DF5A /* FeedVC.swift in Sources */,
+				D0FE7C121BD3EA3B00F6DF5A /* Post.swift in Sources */,
 				D04968291BD1347C006E11CB /* MaterialView.swift in Sources */,
 				D049680D1BD12E69006E11CB /* ViewController.swift in Sources */,
 				D04968321BD13F13006E11CB /* MaterialButton.swift in Sources */,
