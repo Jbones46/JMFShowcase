@@ -18,6 +18,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
    
     
     static var imageCache = NSCache()
+    var imageSelected = false
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     override func viewDidLoad() {
@@ -47,7 +48,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                         
                     }
                 }
-                
+               
             }
             
             self.tableView.reloadData()
@@ -101,6 +102,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             return 150
         }else{
             return tableView.estimatedRowHeight
+            
         }
     
     }
@@ -108,6 +110,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
         imgSelectorImg.image = image
+        imageSelected = true
+        
         
     }
     
@@ -120,7 +124,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     @IBAction func makePost(sender: MaterialButton) {
         
         if let txt = postField.text where txt != "" {
-            if let img = imgSelectorImg.image {
+            if let img = imgSelectorImg.image where imageSelected == true {
                 let urlString = "https://post.imageshack.us/upload_api.php"
                 let url = NSURL(string: urlString)!
                 let imgData = UIImageJPEGRepresentation(img, 0.2)!
@@ -147,6 +151,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                                         if let imageLink = links["image_link"] as? String {
                                             
                                             print("LINK: \(imageLink)")
+                                            self.postToFirebase(imageLink)
+                                            
                                             
                                         }
                                         
@@ -161,14 +167,36 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                         }
                 }
                 
+            }else {
+                self.postToFirebase(nil)
+                
             }
+
             
             
         }
         
-        
     }
     
+    
+    func postToFirebase(imgUrl: String?) {
+        var post: Dictionary<String, AnyObject> = [
+        "description": postField.text!,
+        "likes": 0
+        
+        ]
+        
+        if imgUrl != nil {
+            post["imageUrl"] = imgUrl
+        }
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        self.imgSelectorImg.image = UIImage(named: "camera")
+        self.postField.text = ""
+        imageSelected = false
+        self.tableView.reloadData()
+    }
     
 
 }
