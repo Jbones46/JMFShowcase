@@ -46,7 +46,7 @@ class PostCell: UITableViewCell {
         self.descriptionText.text = post.postDescription
         self.likesLbl.text = String(post.likes)
         
-        if post.imageUrl != nil {
+        if self.post.imageUrl != nil {
             
             if img != nil {
                 self.showcaseImg.image = img
@@ -55,12 +55,18 @@ class PostCell: UITableViewCell {
                     
                     if err == nil {
                         let img = UIImage(data: data!)!
-                        self.showcaseImg.image = img
-                        
                         FeedVC.imageCache.setObject(img, forKey: self.post.imageUrl!)
+                        print(FeedVC.imageCache.debugDescription)
+                        self.showcaseImg.image = img
+                       FeedVC.imageCache.setObject(img, forKey: self.post.imageUrl!)
+                       
                     
                     }else {
-                        print(request)
+                        print(err!.debugDescription)
+                        if err!.code == -999 {
+                            
+                            
+                        }
                     }
                     
                 })
@@ -105,10 +111,10 @@ class PostCell: UITableViewCell {
     }
     
 
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+//    override func setSelected(selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//
+//        // Configure the view for the selected state
+//    }
 
 }

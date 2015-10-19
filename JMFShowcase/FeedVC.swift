@@ -26,11 +26,11 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         super.viewDidLoad()
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        
+        self.tableView.estimatedRowHeight = 358
         tableView.delegate = self
         tableView.dataSource = self
         DataService.ds.REF_POSTS.observeEventType(.Value, withBlock: { snapshot  in
-        self.tableView.estimatedRowHeight = 358
+        
 //            print(snapshot.value)
             
             self.posts = []
@@ -91,7 +91,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                 print(url)
             
                 img = FeedVC.imageCache.objectForKey(url) as? UIImage
-                img?.scale
+                print(img)
+//                if img == nil {
+//                    img = 
+//                }
             }
             
             
