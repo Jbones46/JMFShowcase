@@ -84,12 +84,14 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
             cell.request?.cancel()
+            
             var img: UIImage?
             
             if let url = post.imageUrl {
                 print(url)
             
                 img = FeedVC.imageCache.objectForKey(url) as? UIImage
+                img?.scale
             }
             
             
@@ -140,7 +142,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             if let img = imgSelectorImg.image where imageSelected == true {
                 let urlString = "https://post.imageshack.us/upload_api.php"
                 let url = NSURL(string: urlString)!
-                let imgData = UIImageJPEGRepresentation(img, 0.3)!
+                let imgData = UIImageJPEGRepresentation(img, 0.2)!
                 let keyData = "025EGLPQef5b701533f08f33f43dee50fdbb343f".dataUsingEncoding(NSUTF8StringEncoding)!
                 let keyJSON = "json".dataUsingEncoding(NSUTF8StringEncoding)!
                 

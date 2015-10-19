@@ -56,15 +56,21 @@ class PostCell: UITableViewCell {
                     if err == nil {
                         let img = UIImage(data: data!)!
                         self.showcaseImg.image = img
+                        
                         FeedVC.imageCache.setObject(img, forKey: self.post.imageUrl!)
                     
+                    }else {
+                        print(request)
                     }
                     
                 })
             }
             
         } else {
-            self.showcaseImg.hidden = true
+           
+            if img == nil {
+             self.showcaseImg.hidden = true
+            }
         }
         
         

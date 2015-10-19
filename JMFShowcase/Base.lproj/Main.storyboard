@@ -291,11 +291,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YU0-of-9ic" userLabel="Container" customClass="MaterialView" customModule="JMFShowcase" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YU0-of-9ic" userLabel="Container" customClass="MaterialView" customModule="JMFShowcase" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="8" width="560" height="317.5"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eES-5N-Vx9">
-                                                            <rect key="frame" x="8" y="8" width="544" height="300"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eES-5N-Vx9">
+                                                            <rect key="frame" x="8" y="8" width="544" height="302"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FgL-wj-m8c">
                                                                     <rect key="frame" x="0.0" y="0.0" width="544" height="50"/>
@@ -358,17 +358,11 @@
                                                                     <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                                                 </textView>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" preservesSuperviewLayoutMargins="YES" image="screen" translatesAutoresizingMaskIntoConstraints="NO" id="pFv-4y-87r">
-                                                                    <rect key="frame" x="0.0" y="84" width="544" height="216"/>
+                                                                    <rect key="frame" x="0.0" y="84" width="544" height="219"/>
                                                                     <animations/>
                                                                 </imageView>
                                                             </subviews>
                                                             <animations/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="pFv-4y-87r" secondAttribute="trailing" id="8qq-NL-unb"/>
-                                                                <constraint firstItem="pFv-4y-87r" firstAttribute="leading" secondItem="eES-5N-Vx9" secondAttribute="leading" id="LdX-pU-as4"/>
-                                                                <constraint firstAttribute="bottom" secondItem="pFv-4y-87r" secondAttribute="bottom" constant="2" id="OPg-sx-49o"/>
-                                                                <constraint firstItem="pFv-4y-87r" firstAttribute="top" secondItem="KR7-KE-ezd" secondAttribute="bottom" constant="5" id="vLa-Gf-z5L"/>
-                                                            </constraints>
                                                         </stackView>
                                                     </subviews>
                                                     <animations/>
@@ -377,7 +371,7 @@
                                                         <constraint firstAttribute="trailingMargin" secondItem="eES-5N-Vx9" secondAttribute="trailing" id="KYE-2u-swW"/>
                                                         <constraint firstItem="eES-5N-Vx9" firstAttribute="leading" secondItem="YU0-of-9ic" secondAttribute="leadingMargin" id="M21-ge-Afq"/>
                                                         <constraint firstItem="eES-5N-Vx9" firstAttribute="top" secondItem="YU0-of-9ic" secondAttribute="topMargin" id="Pcc-om-YKh"/>
-                                                        <constraint firstAttribute="bottomMargin" secondItem="eES-5N-Vx9" secondAttribute="bottom" constant="2" id="hOW-DZ-OW0"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="eES-5N-Vx9" secondAttribute="bottom" id="hOW-DZ-OW0"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
