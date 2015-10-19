@@ -18,6 +18,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
    
     
     static var imageCache = NSCache()
+    
     var imageSelected = false
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
@@ -30,14 +31,14 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         tableView.dataSource = self
         DataService.ds.REF_POSTS.observeEventType(.Value, withBlock: { snapshot  in
         self.tableView.estimatedRowHeight = 358
-            print(snapshot.value)
+//            print(snapshot.value)
             
             self.posts = []
             
             if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
                 
                 for snap in snapshots {
-                    print("snap: \(snap)")
+                  //  print("snap: \(snap)")
                     
                     if let postDict = snap.value as? Dictionary<String, AnyObject>{
                         let key = snap.key
@@ -52,10 +53,17 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             }
             
             self.tableView.reloadData()
+//             NSUserDefaults.standardUserDefaults().synchronize()
         
         })
         
     }
+    override func viewDidAppear(animated: Bool) {
+         tableView.reloadData()
+        NSUserDefaults.standardUserDefaults().synchronize()
+
+    }
+    
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -79,18 +87,23 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             var img: UIImage?
             
             if let url = post.imageUrl {
+                print(url)
+            
                 img = FeedVC.imageCache.objectForKey(url) as? UIImage
             }
             
             
             cell.configureCell(post, img: img)
+            
             return cell
+            
             
         }else {
             return PostCell()
             
         }
-        
+       
+       
         
     }
     
@@ -127,7 +140,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             if let img = imgSelectorImg.image where imageSelected == true {
                 let urlString = "https://post.imageshack.us/upload_api.php"
                 let url = NSURL(string: urlString)!
-                let imgData = UIImageJPEGRepresentation(img, 0.2)!
+                let imgData = UIImageJPEGRepresentation(img, 0.3)!
                 let keyData = "025EGLPQef5b701533f08f33f43dee50fdbb343f".dataUsingEncoding(NSUTF8StringEncoding)!
                 let keyJSON = "json".dataUsingEncoding(NSUTF8StringEncoding)!
                 
@@ -150,7 +163,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                                         
                                         if let imageLink = links["image_link"] as? String {
                                             
-                                            print("LINK: \(imageLink)")
+//                                            print("LINK: \(imageLink)")
                                             self.postToFirebase(imageLink)
                                             
                                             
